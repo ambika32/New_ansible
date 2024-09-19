@@ -7,8 +7,7 @@
           name: tree
           state: present
       
-      - name: Install nginx
+      - name: Install apache2
         apt:
-          name: nginx
+          name: apache2
           state: present
-          
