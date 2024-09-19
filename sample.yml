@@ -1,0 +1,14 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+      - name: Install tree
+        apt:
+          name: tree
+          state: present
+      
+      - name: Install nginx
+        apt:
+          name: nginx
+          state: present
+          
