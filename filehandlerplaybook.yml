@@ -1,5 +1,5 @@
 ---
-- myhosts: all
+- hosts: javaserver
   become: yes
   tasks:
       - include_tasks: createfileplaybook.yml
