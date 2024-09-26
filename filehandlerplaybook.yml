@@ -14,8 +14,8 @@
             path: /home/ambika/myfile1.txt
             state: touch
 
-      - name: i want to replace apache2 vertex page
-        template: 
+      - name : i want to replace apache vertex page
+        template:
             src: newfiletemplate.j2
-            desc: /var/www/html/index.html
+            dest: /var/www/html/index.html
 
