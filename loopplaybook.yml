@@ -3,14 +3,14 @@
   become: yes
  
   tasks:
-      - name: i want to display variable value
-        debug:
-           msg: "{{myvar3}}"
+      #- name: i want to display variable value
+       # debug:
+        #   msg: "{{myvar3}}"
 
-      - name: i want to install git 
-        apt: 
-            name: "{{myvar2}}"
-            state: present
+      #- name: i want to install git 
+       # apt: 
+        #    name: "{{myvar2}}"
+          #  state: present
           
       - name: i want to install packages through loop
         apt:
