@@ -1,0 +1,23 @@
+---
+- hosts: javaserver
+  become: yes
+  tasks:
+     - name: i want to run linux command
+       command: hostname -f
+       register: myresult1
+
+     - name: i want to display linux cmd output value
+       debug:
+          msg: "{{myresult1}}"
+
+     - name: i want to install git when error not ocuur
+       apt: 
+          name: git 
+          state: present
+       when: myresult1.stderr != ""
+
+     - name: i want to install tree when error not occur
+       apt: 
+          name: apache2
+          state: present
+       when: myresult1.stderr == ""
