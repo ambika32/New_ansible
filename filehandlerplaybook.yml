@@ -9,6 +9,11 @@
             name: apache2
             state: present
 
+      - name: i want to create file into ansible-node
+        file: 
+            path: /home/ambika/myfile1.txt
+            state: touch
+
       - name: i want to replace apache2 vertex page
         template: 
             src: newfiletemplate.j2
