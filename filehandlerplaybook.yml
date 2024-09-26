@@ -1,5 +1,5 @@
 ---
-- myhosts: javaserver
+- myhosts: all
   become: yes
   tasks:
       - include_tasks: createfileplaybook.yml
@@ -13,4 +13,4 @@
         template: 
             src: newfiletemplate.j2
             desc: /var/www/html/index.html
-            
+
