@@ -1,0 +1,13 @@
+--- 
+- hosts: javaserver
+  become: yes
+ 
+  tasks:    
+      - name: i want to install packages through loop
+        apt:
+            name: "{{item}}"
+            state: present
+        loop: 
+         - git
+         - tree
+         - nginx
